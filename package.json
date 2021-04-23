@@ -29,6 +29,6 @@
   },
   "version": "0.1.0",
   "lint-staged": {
-    "*.{js,scss,css,md}": "prettier --write"
+    "*.{js,json,scss,css}": "prettier --write"
   }
 }
