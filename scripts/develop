@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Colors
+BLUE=$(tput -Txterm setaf 6)
+RESET=$(tput -Txterm sgr0)
+
+# Messages
+INFO="${BLUE}[INFO]${RESET}"
+
+# Get vault details so that we can put things in the right spot
+_obsidian_metadata="$HOME/Library/Application Support/obsidian/obsidian.json"
+
+_id_value_for_open_vault=$(gron "$_obsidian_metadata" |
+    rg 'open' |
+    rg '[a-zA-Z0-9]{16}' --only-matching)
+
+_path_for_open_vault=$(gron "$_obsidian_metadata" |
+    rg "$_id_value_for_open_vault" |
+    rg "path" |
+    rg '((?:/\w+)+)' --only-matching)
+
+echo "$INFO Making sure dependencies are installed..."
+npm install
+npm run prepare
+
+echo "$INFO Starting to watch the project...."
+
+# Run things at the same time
+npx concurrently \
+    "echo \"[INFO] Will copy over any changes to obsidian.css if updates are detected...\" && npx onchange \"obsidian.css\" -- \
+        echo \"$INFO obsidian.css was updated, copying over to local installation...\" && \
+        cp '{{file}}' \"$_path_for_open_vault/.obsidian/snippets/dracula-unofficial.css\"" \
+    "npx sass --no-source-map --watch src/dracula-unofficial.scss:obsidian.css"

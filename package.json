@@ -1,0 +1,35 @@
+{
+  "author": "Julian Torres",
+  "bugs": {
+    "url": "https://github.com/macintacos/obsidian-dracula-unofficial/issues"
+  },
+  "description": "An unofficial theme for Dracula in Obsidian.md",
+  "devDependencies": {
+    "concurrently": "6.0.2",
+    "husky": "6.0.0",
+    "onchange": "7.1.0",
+    "pretty-quick": "3.1.0",
+    "sass": "1.32.11"
+  },
+  "homepage": "https://github.com/macintacos/obsidian-dracula-unofficial#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "keywords": [
+    "theme",
+    "obsidian"
+  ],
+  "license": "MIT",
+  "name": "obsidian-dracula-unofficial",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macintacos/obsidian-dracula-unofficial.git"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "./scripts/develop"
+  },
+  "version": "0.1.0"
+}
