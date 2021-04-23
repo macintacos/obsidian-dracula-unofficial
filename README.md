@@ -5,4 +5,4 @@ The unofficial Dracula theme for Obsidian. Mostly made this for myself, but figu
 
 ## Contributing
 
-1. `npm install`
+TBD
