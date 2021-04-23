@@ -7,17 +7,12 @@
   "devDependencies": {
     "concurrently": "6.0.2",
     "husky": "6.0.0",
+    "lint-staged": "10.5.4",
     "onchange": "7.1.0",
-        "prettier": "2.2.1",
-    "pretty-quick": "3.1.0",
+    "prettier": "2.2.1",
     "sass": "1.32.11"
   },
   "homepage": "https://github.com/macintacos/obsidian-dracula-unofficial#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "keywords": [
     "theme",
     "obsidian"
@@ -32,5 +27,8 @@
     "prepare": "husky install",
     "dev": "./scripts/develop"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "lint-staged": {
+    "*.{js,scss,css,md}": "prettier --write"
+  }
 }
