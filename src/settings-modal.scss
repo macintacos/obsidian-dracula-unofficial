@@ -1,0 +1,9 @@
+// Settings modal styles
+.modal button:not(.mod-cta):not(.mod-warning):hover {
+    background-color: $dracula-purple;
+    color: $dracula-background-darker;
+}
+
+.modal button {
+    font-family: "Inter";
+}

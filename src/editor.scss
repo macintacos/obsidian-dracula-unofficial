@@ -1,0 +1,285 @@
+// Editor-specific stuff goes here
+@import 'outliner';
+
+.cm-fat-cursor .CodeMirror-cursor {
+    background: $dracula-red;
+  }
+
+.CodeMirror {
+  background-color: $dracula-background;
+}
+
+.CodeMirror-vscrollbar {
+  background-color: $dracula-background;
+}
+
+.CodeMirror-lines {
+  font-family: "JetBrains Mono";
+  color: $dracula-foreground;
+}
+
+.CodeMirror-guttermarker-subtle {
+  color: $dracula-comment;
+}
+
+.CodeMirror-gutter {
+  &.CodeMirror-linenumbers,
+  &.CodeMirror-foldgutter {
+    background-color: $dracula-background;
+  }
+}
+
+.CodeMirror-selected {
+  // Hack to highlight the selected text
+  background-color: $dracula-current-line !important;
+  mix-blend-mode: difference !important;
+  z-index: 3;
+}
+
+.cm-formatting-header {
+  font-size: 0.9em;
+}
+
+.cm-formatting {
+  color: $dracula-purple;
+
+  &.cm-formatting-image.cm-image,
+  &.cm-formatting.cm-formatting-lin.cm-link,
+  &.cm-formatting-image.cm-image.cm-image-alt-text.cm-link {
+    color: $dracula-foreground;
+  }
+
+  &.cm-formatting-highlight.cm-highlight {
+    color: $dracula-yellow;
+  }
+
+  &.cm-formatting-link-string.cm-strin.cm-url {
+    color: $dracula-cyan;
+  }
+
+  &.cm-formatting-code {
+    border-radius: 5px;
+  }
+}
+
+.cm-s-obsidian {
+  .CodeMirror-linenumber {
+    color: $dracula-comment;
+  }
+
+  .cm-math {
+    font-family: "JetBrains Mono";
+  }
+
+  span {
+    .obsidian-search-match-highlight {
+      color: $dracula-background !important;
+      background-color: $dracula-yellow !important;
+      border-radius: 3px !important;
+    }
+
+    .cm-bracket {
+      color: $dracula-yellow;
+    }
+
+    .cm-formatting-link {
+      color: $dracula-foreground;
+
+      &.cm-link,
+      &.cm-link.cm-hmd-footnote,
+      &.cm-hmd-barelink.cm-footref {
+        color: $dracula-foreground;
+      }
+    }
+
+    .cm-string {
+      color: $dracula-foreground;
+    }
+
+    .cm-formatting-task {
+      color: $dracula-comment;
+    }
+
+    .cm-hashtag {
+      color: $dracula-comment;
+    }
+
+    .cm-hmd-escape-backslash {
+      color: $dracula-comment;
+    }
+
+    .cm-builtin,
+    .cm-hr {
+      color: $dracula-comment;
+    }
+
+    .cm-link,
+    .cm-hmd-internal-link {
+      color: $dracula-pink;
+
+      &.cm-footref,
+      &.cm-hmd-footnote {
+        color: $dracula-orange;
+      }
+    }
+
+    .cm-url {
+      color: $dracula-cyan;
+    }
+
+    .cm-highlight,
+    .cm-formatting-highlight {
+      color: $dracula-yellow;
+    }
+
+    .cm-inline-code {
+      color: $dracula-green;
+      background-color: $dracula-background-darker;
+      font-family: "JetBrains Mono";
+      padding: 5px 0;
+    }
+
+    .cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+      background-color: $dracula-background-darker;
+    }
+
+    .cm-quote {
+      color: $dracula-comment;
+      font-style: italic;
+    }
+
+    .cm-formatting-list {
+      color: $dracula-comment;
+    }
+  }
+
+  .HyperMD-table-row {
+    font-family: "JetBrains Mono";
+
+    span {
+      .cm-hmd-table-sep {
+        color: $dracula-comment;
+      }
+    }
+  }
+
+  .HyperMD-table-row-1 {
+    > span {
+      color: $dracula-comment;
+    }
+  }
+
+  .HyperMD-codeblock {
+    font-family: "JetBrains Mono";
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+  div {
+    .HyperMD-codeblock-begin-bg {
+      top: -7px;
+      background-color: $dracula-background-darker;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+
+    .HyperMD-codeblock-bg {
+      background-color: $dracula-background-darker;
+    }
+
+    .HyperMD-codeblock-end-bg {
+      background-color: $dracula-background-darker;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+    }
+  }
+
+  pre {
+    &.HyperMD-codeblock {
+      span.cm-formatting-code-block {
+        color: $dracula-comment !important;
+      }
+    }
+  }
+
+  .cm-strong {
+    font-weight: 900;
+  }
+}
+
+.theme-dark {
+  .cm-s-obsidian {
+    .cm-hmd-frontmatter {
+      &.cm-atom.cm-hmd-frontmatter {
+        color: $dracula-orange;
+      }
+
+      &.cm-def.cm-hmd-frontmatter {
+        color: $dracula-green;
+      }
+
+      &.cm-string.cm-hmd-frontmatter {
+        color: $dracula-yellow;
+      }
+
+      &.cm-keyword.cm-hmd-frontmatter {
+        color: $dracula-cyan;
+      }
+
+      &.cm-number.cm-hmd-frontmatter {
+        color: $dracula-purple;
+      }
+    }
+
+    .cm-math {
+      &.cm-number.cm-math {
+        color: $dracula-purple;
+      }
+      &.cm-tag.cm-math {
+        color: $dracula-red;
+      }
+      &.cm-keyword.cm-formatting {
+        color: $dracula-cyan;
+      }
+    }
+
+    span {
+      .cm-math.cm-variable-2.cm-math {
+        color: $dracula-pink;
+      }
+    }
+
+    pre.HyperMD-codeblock {
+      .cm-hmd-codeblock {
+        color: $dracula-foreground;
+      }
+
+      .cm-variable.cm-hmd.codeblock {
+        color: $dracula-foreground;
+      }
+
+      .cm-keyword {
+        color: $dracula-pink !important;
+      }
+
+      .cm-def,
+      .cm-property {
+        color: $dracula-green !important;
+      }
+
+      .cm-string {
+        color: $dracula-yellow !important;
+      }
+
+      span.cm-variable-2 {
+        color: $dracula-orange !important;
+      }
+    }
+  }
+}
+
+.cm-image.cm-image-alt-text.cm-link {
+  color: $dracula-pink;
+}
+
+

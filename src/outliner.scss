@@ -1,0 +1,10 @@
+// Styles related to the Outliner plugin: https://github.com/vslinko/obsidian-outliner
+.outliner-plugin-bls {
+  .cm-s-obsidian {
+    span {
+      .cm-formatting-list-ul::before {
+        color: $dracula-comment !important;
+      }
+    }
+  }
+}
