@@ -1,0 +1,60 @@
+// Workspace-related styles
+.workspace-split {
+  &.mod-root {
+    &.view-content {
+      background-color: $dracula-background;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+
+    > .workspace-leaf:first-of-type:last-of-type {
+      .view-header {
+        background-color: $dracula-background-darker !important;
+      }
+
+      &.mod-active {
+        .view-header-title-container:after {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.workspace-ribbon.is-collapsed {
+  background-color: $dracula-background-darker;
+}
+
+.workspace-split.mod-left-split {
+  .workspace-tabs {
+    .workspace-leaf {
+      border-top-right-radius: 6px;
+    }
+  }
+}
+
+.view-header {
+  background-color: $dracula-background-darker;
+}
+
+.view-header-icon,
+.view-header-title,
+.view-action {
+  color: $dracula-comment;
+  font-style: italic;
+}
+
+.mod-active {
+  .view-header-icon,
+  .view-action {
+    color: $dracula-cyan;
+  }
+
+  .view-header-title {
+    font-style: normal;
+  }
+}
+
+.view-header-title-container:after {
+  background: none;
+}

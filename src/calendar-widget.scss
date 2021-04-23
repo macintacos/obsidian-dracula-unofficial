@@ -1,0 +1,25 @@
+svg.dot.filled {
+  fill: $dracula-comment;
+}
+
+.day {
+  &.svelte-q3wqg9:hover {
+    // styling for when you hover on a particular date
+    background-color: $dracula-background-darker !important;
+    color: $dracula-orange;
+    opacity: 1;
+  }
+
+  &.adjacent-month.svelte-q3wqg9 {
+    color: $dracula-comment;
+    opacity: 1;
+  }
+}
+
+.arrow:hover > svg {
+  --color-arrow: #ff79c6;
+}
+
+.reset-button:hover {
+  --text-muted: #ff79c6;
+}

@@ -1,0 +1,50 @@
+@import 'colors';
+@import 'calendar-widget';
+@import 'editor';
+@import 'nav';
+@import 'tree';
+@import 'menus';
+@import 'settings-modal';
+@import 'workspace';
+@import 'preview';
+
+.is-active {
+  svg.widget-icon {
+    fill: $dracula-background;
+  }
+}
+
+.status-bar-item {
+  color: $dracula-comment;
+  font-size: 0.8em;
+  font-family: var(--font-monospace);
+}
+
+.modal {
+  border-radius: 10px;
+}
+
+.copy-code-button {
+  color: $dracula-comment !important;
+}
+
+
+.external-link {
+  color: $dracula-cyan;
+}
+
+.suggestion-item {
+  &.is-selected {
+    background-color: $dracula-background-darker;
+    border-radius: 5px;
+  }
+}
+
+.suggestion-highlight {
+  color: $dracula-pink;
+}
+
+.side-dock-ribbon-action:hover {
+    color: $dracula-cyan;
+}
+

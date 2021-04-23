@@ -1,0 +1,39 @@
+// Menu-related things
+.menu-item {
+  &:hover {
+    background-color: $dracula-background-darker;
+
+    .menu-item-icon {
+      color: $dracula-green;
+
+      svg {
+        &.trash,
+        &.crossed-star {
+          color: $dracula-red;
+        }
+
+        &.templater-icon,
+        &.create-new,
+        &.folder {
+          color: $dracula-cyan;
+        }
+
+        &.pencil {
+          color: $dracula-orange;
+        }
+
+        &.paper-plane {
+          color: $dracula-purple;
+        }
+
+        &.popup-open {
+          color: $dracula-comment;
+        }
+
+        &.star {
+          color: $dracula-yellow;
+        }
+      }
+    }
+  }
+}
